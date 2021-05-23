@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DELETE BOOKS</title>
+</head>
+<body>
+	<form action="\delete" method="POST">
+		<table style=" background-repeat:no-repeat; width:850px;margin:0;" cellpadding="0" cellspacing="0" border=black>
+		<th class="name-row">Book ID</th>
+        <th class="name-row">Book Name</th>
+        <th class="name-row">Book Author</th>
+		{% for book in deletebooks %}
+		<tr>
+			<td style="text-align:center">{{book.bookid}}</td>
+			<td style="text-align:center">{{book.bname}}</td>
+			<td style="text-align:center">{{book.bauthor}}</td>
+		</tr>
+		{% endfor %}
+		</table><br>
+		<label>Id of the book : </label>
+		<input type="text" name="bookid" id="bookid"><br><br>
+		<button type="submit">DELETE</button><br>
+	</form>
+	<form action="/admin">
+		<br><button type="submit">BACK</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD BOOKS</title>
+</head>
+<body>
+	<table style=" background-repeat:no-repeat; width:850px;margin:0;" cellpadding="0" cellspacing="0" border=black>
+		<th>BOOK NAME</th>
+		<th>BOOK AUTHOR</th>
+		<th>BOOK ID</th>
+		{% for items in updatebooks %}
+		<tr>
+			<td style="text-align:center">{{items.bname}}</td>
+			<td style="text-align:center">{{items.bauthor}}</td>
+			<td style="text-align:center">{{items.bookid}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<form action="\update" method="POST">
+		<br><label>Book ID : </label>
+		<input type="text" name="bookid" id="bookid" value="{{request.form.bookid}}"><br><br>
+		<label>Book Name : </label>
+		<input type="text" name="bname" id="bname" value="{{request.form.bname}}"><br><br>
+		<label>Book Author : </label>
+		<input type="text" name="bauthor" id="bauthor" value="{{request.form.bauthor}}"><br><br>
+		<button type="submit">UPDATE</button>
+	</form>
+	<form action="/admin">
+		<br><button type="submit">BACK</button>
+	</form>
+</body>
+</html>

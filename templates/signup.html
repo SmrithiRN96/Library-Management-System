@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SIGN UP</title>
+</head>
+<body>
+	<form action="/signup" method="POST">
+		<input type="text" name="usermailid" id="usermailid" placeholder="Mailid"><br>
+		<input type="password" name="userpassword" id="userpassword" placeholder="Password"><br>
+		<select id="userrole" name="userrole" value={{request.form.userrole}}>
+			<option value="admin">ADMIN</option>
+			<option value="user">USER</option>
+		</select>
+		<button type="submit">SIGN UP</button>
+	</form>	
+
+</body>
+</html>

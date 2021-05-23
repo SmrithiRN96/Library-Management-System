@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LIBRARY MANAGEMENT SYSTEM</title>
+</head>
+<body>
+	<center><h1>LIBRARY MANAGEMENT SYSTEM</h1></center>
+	<center><h2>LOGIN PAGE</h2></center>
+	<center>
+		<form action="/" method="POST">
+		<input type="text" name="usermailid" placeholder="mailid" value="{{request.form.usermailid}}"><br><br>
+		<input type="password" name="userpassword" placeholder="password" value="{{request.form.userpassword}}">
+		<button type="submit">LOG IN</button>
+		<h2><p>Please sign in if not a member</p></h2>
+		<h2><a href="/signup">SIGN UP</a></h2>
+		</form>
+	</center>
+</body>
+</html>
